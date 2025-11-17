@@ -22,16 +22,7 @@ STR_TO_DATE( "10/08/2025", "%d/%m/%Y" ),
 STR_TO_DATE( "17/08/2025", "%d/%m/%Y" ), 
 350*7,
 1, -- vinicius
-12 -- suite
-);
-
-INSERT INTO reserva(data_entrada, data_saida, valor_total, id_hospede, id_quarto) 
-VALUES(
-DATE(now()),
-STR_TO_DATE( "21/11/2025", "%d/%m/%Y" ), 
-350*5,
-5,
-12 -- suite
+4 -- suite
 );
 
 INSERT INTO reserva(data_entrada, data_saida, valor_total, id_hospede, id_quarto) 
@@ -40,7 +31,7 @@ STR_TO_DATE( "14/08/2025", "%d/%m/%Y" ),
 STR_TO_DATE( "28/08/2025", "%d/%m/%Y" ), 
 100*14,
 2,  -- bernardo
-10  -- superior
+2  -- superior
 );
 
 INSERT INTO reserva(data_entrada, data_saida, valor_total, id_hospede, id_quarto) 
@@ -49,5 +40,5 @@ STR_TO_DATE( "20/09/2025", "%d/%m/%Y" ),
 STR_TO_DATE( "23/09/2025", "%d/%m/%Y" ), 
 200*3,
 3,  -- kauan
-11  -- luxuoso
+3 -- luxuoso
 );
