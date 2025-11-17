@@ -42,10 +42,10 @@ CREATE TABLE Reserva (
 -- Trigger para atualizar o status do quarto quando uma reserva é criada
 DELIMITER //
 CREATE TRIGGER trg_atualiza_status_quarto
-AFTER INSERT ON Reserva
+AFTER INSERT ON reserva
 FOR EACH ROW
 BEGIN
-    UPDATE Quarto
+    UPDATE quarto
     SET status = 'ocupado'
     WHERE id_quarto = NEW.id_quarto;
 END;
@@ -55,11 +55,11 @@ DELIMITER ;
 -- Trigger para liberar o quarto após a data de saída
 DELIMITER //
 CREATE TRIGGER trg_libera_quarto
-AFTER UPDATE ON Reserva
+AFTER UPDATE ON reserva
 FOR EACH ROW
 BEGIN
     IF NEW.data_saida <= CURDATE() THEN
-        UPDATE Quarto
+        UPDATE quarto
         SET status = 'disponível'
         WHERE id_quarto = NEW.id_quarto;
     END IF;
