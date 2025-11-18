@@ -32,7 +32,7 @@ SELECT * FROM hospede;
     JOIN 
 		reserva r ON h.id_hospede = r.id_hospede;
 
-	-- Filtro por data
+	-- Filtro por data e valor
     SELECT
 		id_reserva,
         data_entrada,
